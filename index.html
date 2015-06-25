@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+        <title>Mi aplicacion</title>
+
+        <!--grupo CSS-->
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+          <link rel="stylesheet" href="js/mitema.min.css"/>
+        <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+        
+        
+
+
+        <!--grupo JavaScript-->
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/acciones.js" type="text/javascript"></script>
+        
+        <script src="phonegap.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+<!-- Principal -->
+     <div data-role="page" id="principal">
+            
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">  
+          <h1>MATEMATICAS</h1>
+        </div>
+
+         <div data-role="main" class="ui-content" >
+         
+         <div align="center">
+         
+       <a href="#popupSUMA" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-a">SUMAS</a>
+         
+        <a href="#popupRESTA" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-minus} ui-btn-icon-left ui-btn-a">RESTAS</a>
+          
+        <a href="#popupMULTIPLICACION" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-a">MULTIPLICACIONES</a>
+          
+         
+         
+        </div>
+         
+         
+     <div data-role="popup" id="popupSUMA" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">DIFICULTAD</li>
+            <li><a href="#operaciones" id="facsuma" class="ope">FACIL</a></li>
+			<li><a href="#operaciones" id="medsuma" class="ope">MEDIO</a></li>
+            <li><a href="#operaciones" id="difsuma" class="ope">DIFICIL</a></li>   
+        </ul>
+	</div>
+    
+    <div data-role="popup" id="popupRESTA" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">DIFICULTAD</li>
+            <li><a href="#operaciones" id="facres" class="ope">FACIL</a></li>
+			<li><a href="#operaciones" id="medres" class="ope">MEDIO</a></li>
+            <li><a href="#operaciones" id="difres" class="ope">DIFICIL</a></li>   
+        </ul>
+	</div>
+    
+     <div data-role="popup" id="popupMULTIPLICACION" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">DIFICULTAD</li>
+            <li><a href="#operaciones" id="mul2" class="ope">TABLA 2</a></li>
+			<li><a href="#operaciones" id="mul3" class="ope">TABLA 3</a></li>
+            <li><a href="#operaciones" id="mul4" class="ope">TABLA 4</a></li>  
+            <li><a href="#operaciones" id="mul5" class="ope">TABLA 5</a></li>  
+            <li><a href="#operaciones" id="mul6" class="ope">TABLA 6</a></li>  
+            <li><a href="#operaciones" id="mul7" class="ope">TABLA 7</a></li>  
+            <li><a href="#operaciones" id="mul8" class="ope">TABLA 8</a></li>  
+            <li><a href="#operaciones" id="mul9" class="ope">TABLA 9</a></li>   
+            <li><a href="#operaciones" id="mulaleatorias" class="ope">ALEATORIAS</a></li>  
+        </ul>
+	</div>
+    
+  
+
+   
+        </div>
+        
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+         
+        </div>        
+        
+     </div>
+  
+<!-- Principal -->
+		
+        <div data-role="page" id="operaciones">
+            
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">  
+          <h2 id="tema">MATEMATICAS</h2>
+           <div style="width:10%; float:left" id="puntos">BUENAS:0</div>
+            <div style="width:10%; float:left" id="puntosmal">MALAS:0</div>
+            <div style="width:10%; float:right" id="contador">TIEMPO:</div>
+        </div>
+
+         <div data-role="main" class="ui-content" >
+			
+            <div align="center">
+            	<h1><div id="num1"></div></h1>
+            
+            
+            <div style="width:33%; float:left"> <input type="button" data-theme="b" value="1" class="valope" id="btn1"></div>
+            <div style="width:33%; float:left"> <input type="button" data-theme="a" value="2" class="valope" id="btn2"></div>
+            <div style="width:33%; float:left"> <input type="button" data-theme="b" value="3" class="valope" id="btn3"></div><br>
+            <div style="width:33%; float:left"> <input type="button" data-theme="b" value="4" class="valope" id="btn4"></div>
+            <div style="width:33%; float:left"> <input type="button" data-theme="a" value="5" class="valope" id="btn5"></div>
+            <div style="width:33%; float:left"> <input type="button" data-theme="b" value="6" class="valope" id="btn6"></div><br>
+            <div style="width:33%; float:left"> <input type="button" data-theme="b" value="7" class="valope" id="btn7"></div>
+            <div style="width:33%; float:left"> <input type="button" data-theme="a" value="8" class="valope" id="btn8"></div>     
+            <div style="width:33%; float:left"> <input type="button" data-theme="b" value="9" class="valope" id="btn9"></div><br>
+           	<div style="width:33%; float:left"> <input type="button" data-theme="b" value="." class="valope" id="btnpunto"></div>
+            <div style="width:33%; float:left"> <input type="button" data-theme="a" value="0" class="valope" id="btn0"></div>   
+            
+            
+             <div style="width:33%; float:left"> <input type="button" data-theme="b" value="BORRAR"  id="btnborrar"></div>			       		
+            </div>
+            
+            
+
+		</div>
+        
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+         
+        </div>        
+        
+     </div>
+	
+
+
+
+ <div data-role="page" id="resultado">
+            
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">  
+          <h2 id="tema">RESULTADO</h2>
+         </div>
+
+         <div data-role="main" class="ui-content" >
+         <div align="center">
+       <font face="Arial Black, Gadget, sans-serif" size="20" id="puntaje"></font>
+         <div>BUENAS</div>
+         
+          <font face="Arial Black, Gadget, sans-serif" size="20" id="puntajemal"></font>
+         <div>MALAS</div>
+         
+         </div>
+        </div>
+        
+        
+          <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+       <div data-role="navbar">
+        <ul>
+         
+        <li><a href="#principal" data-icon="home" id="btninicio">INICIO</a></li>
+        </ul>
+       </div>
+      </div>  
+        
+        
+    </div>
+         
+
+ </body>
+</html> 
