@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(e) {	
-document.addEventListener("deviceready",function(){
+//document.addEventListener("deviceready",function(){
 	var numaleatorio1=0;
 	var numaleatorio2=0;
 	
@@ -180,7 +180,7 @@ document.addEventListener("deviceready",function(){
 	}
 	
 			//GUIONES BAJOS
-	function guionesbajo(){
+				function guionesbajo(){
 						caroperacion=operacion.toString().length;
 							switch (caroperacion)
 							{
@@ -201,7 +201,6 @@ document.addEventListener("deviceready",function(){
 		
 		
 	$('#btnborrar').on('tap', function (){
-			
 			resultadousu="";									
 			guionesbajo();
 	})
@@ -219,8 +218,7 @@ document.addEventListener("deviceready",function(){
 					idoperador = $(this).attr('id')
 					numerosaleatorios();
 					guionesbajo();	
-													
-				
+												
 	})
 	
 	
@@ -262,11 +260,9 @@ document.addEventListener("deviceready",function(){
 				}else
 					{
 					numeropuntos=0;	
-					if (puntos>0)
-					{
+					
 						puntosmal=puntosmal+1;
-					}
-									
+														
 						resultadousu="";
 						numerosaleatorios();
 						guionesbajo();	
@@ -279,4 +275,4 @@ document.addEventListener("deviceready",function(){
 	})
 	
 }); 
-});
+//});
