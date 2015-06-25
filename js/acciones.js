@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(e) {	
-//document.addEventListener("deviceready",function(){
+document.addEventListener("deviceready",function(){
 	var numaleatorio1=0;
 	var numaleatorio2=0;
 	
@@ -275,4 +275,4 @@ $(document).ready(function(e) {
 	})
 	
 }); 
-//});
+});
