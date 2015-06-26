@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(e) {	
-document.addEventListener("deviceready",function(){
+//document.addEventListener("deviceready",function(){
 	var numaleatorio1=0;
 	var numaleatorio2=0;
 	
@@ -44,12 +44,13 @@ document.addEventListener("deviceready",function(){
 		if(numsigno==1)
 		{
 			signo="+";	
-		}else if(numsigno=2)
+		}else if(numsigno==2)
 		{
 			signo="-";	
 		}else{
 			signo="X"	
 		}
+		alert(signo);
 	}
 	
 	function numerosaleatorios()
@@ -354,4 +355,4 @@ document.addEventListener("deviceready",function(){
 	})
 	
 }); 
-});
+//});
