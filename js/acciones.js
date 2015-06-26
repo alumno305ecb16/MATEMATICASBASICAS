@@ -50,7 +50,7 @@ document.addEventListener("deviceready",function(){
 		}else{
 			signo="X"	
 		}
-		alert(signo);
+		//alert(signo);
 	}
 	
 	function numerosaleatorios()
