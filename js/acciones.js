@@ -15,6 +15,7 @@ document.addEventListener("deviceready",function(){
 	var numeropuntos=0;
 	var vcount=0;
 	var signo="";
+	var numsigno=0;
 	var nummul=0;
 	
 	var count=60;
@@ -34,6 +35,21 @@ document.addEventListener("deviceready",function(){
 			
 		}
 	
+	}
+	
+	
+	function nsigno()
+	{
+		numsigno = Math.floor(Math.random()*3)+1;
+		if(numsigno==1)
+		{
+			signo="+";	
+		}else if(numsigno=2)
+		{
+			signo="-";	
+		}else{
+			signo="X"	
+		}
 	}
 	
 	function numerosaleatorios()
@@ -167,14 +183,77 @@ document.addEventListener("deviceready",function(){
 				numaleatorio2 = nummul;
 				operacion=numaleatorio1*numaleatorio2;
 				signo="X";
-				break
+				break;
 			case("mulaleatorias"):
 				$('#tema').html("MULTIPLICACIONES ALEATORIAS");
 				numaleatorio1 = Math.floor(Math.random()*10)+1
 				numaleatorio2 = Math.floor(Math.random()*10)+1
 				operacion=numaleatorio1*numaleatorio2;
 				signo="X";
-				break
+				break;
+			case("avafac"):
+				$('#tema').html("AVANZADO FACIL");
+				numaleatorio1 = Math.floor(Math.random()*10)+1
+				numaleatorio2 = Math.floor(Math.random()*10)+1
+				nsigno();
+				if (signo=="X")
+				{
+					operacion=numaleatorio1*numaleatorio2;	
+				}else if(signo=="+")
+				{
+					operacion=numaleatorio1+numaleatorio2;	
+				}else{
+					if(numaleatorio1<numaleatorio2)
+					{
+						numerosaleatorios();
+					}
+					operacion=numaleatorio1-numaleatorio2;	
+				}
+				
+			
+				
+				break;
+				
+			case("avamed"):
+			$('#tema').html("AVANZADO MEDIO");
+				numaleatorio1 = Math.floor(Math.random()*50)+1
+				numaleatorio2 = Math.floor(Math.random()*50)+1
+				nsigno();
+				if (signo=="X")
+				{
+					operacion=numaleatorio1*numaleatorio2;	
+				}else if(signo=="+")
+				{
+					operacion=numaleatorio1+numaleatorio2;	
+				}else{
+					if(numaleatorio1<numaleatorio2)
+					{
+						numerosaleatorios();
+					}
+					operacion=numaleatorio1-numaleatorio2;	
+				}
+				break;
+				
+			case("avadif"):
+				$('#tema').html("AVANZADO DIFICIL");
+				numaleatorio1 = Math.floor(Math.random()*100)+1
+				numaleatorio2 = Math.floor(Math.random()*100)+1
+				nsigno();
+				if (signo=="X")
+				{
+					operacion=numaleatorio1*numaleatorio2;	
+				}else if(signo=="+")
+				{
+					operacion=numaleatorio1+numaleatorio2;	
+				}else{
+					if(numaleatorio1<numaleatorio2)
+					{
+						numerosaleatorios();
+					}
+					operacion=numaleatorio1-numaleatorio2;	
+				}
+				break;
+				
 		}
 		
 	}
